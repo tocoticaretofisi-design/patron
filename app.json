@@ -1,4 +1,14 @@
-cat << 'EOF' > app.json
+{
+  "expo": {
+    "name": "Patron",
+    "slug": "snack-84d77abc-20e1-492d-88a7-acd498477e31",
+    "version": "1.0.0",
+    "cli": {
+      "appVersionSource": "remote"
+    },
+    ...
+  }
+}cat << 'EOF' > app.json
 {
   "expo": {
     "name": "Patron",
