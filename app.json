@@ -3,31 +3,13 @@
     "name": "Patron",
     "slug": "snack-84d77abc-20e1-492d-88a7-acd498477e31",
     "version": "1.0.0",
-    "cli": {
-      "appVersionSource": "remote"
-    },
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
-    "splash": {
-      "image": "./assets/splash-icon.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
-    },
     "ios": {
       "supportsTablet": true
     },
     "android": {
-      "package": "com.toco.patron",
-      "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
-        "foregroundImage": "./assets/android-icon-foreground.png",
-        "backgroundImage": "./assets/android-icon-background.png",
-        "monochromeImage": "./assets/android-icon-monochrome.png"
-      }
-    },
-    "web": {
-      "favicon": "./assets/favicon.png"
+      "package": "com.toco.patron"
     },
     "extra": {
       "eas": {
