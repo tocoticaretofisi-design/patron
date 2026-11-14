@@ -329,7 +329,7 @@ function HomeScreen({ navigation, userEmail, totalCash, totalAvailable, upcoming
   return (
     <ScrollView 
       style={styles.container} 
-      contentContainerStyle={{ paddingBottom: 100, paddingTop: 10 }}
+      contentContainerStyle={{ paddingBottom: 140, paddingTop: 10 }}
       onScroll={onScroll}
       scrollEventThrottle={16}
     >
@@ -594,7 +594,7 @@ function FinanceScreen({
 
       <ScrollView 
         showsVerticalScrollIndicator={false} 
-        contentContainerStyle={{ paddingBottom: 100 }}
+        contentContainerStyle={{ paddingBottom: 140 }}
         onScroll={onScroll}
         scrollEventThrottle={16}
       >
@@ -1020,7 +1020,7 @@ function PortfolioScreen({ portfolios, setPortfolios, demands, setDemands, onScr
 
       <ScrollView 
         showsVerticalScrollIndicator={false} 
-        contentContainerStyle={{ paddingBottom: 100 }}
+        contentContainerStyle={{ paddingBottom: 140 }}
         onScroll={onScroll}
         scrollEventThrottle={16}
       >
@@ -1193,9 +1193,9 @@ export default function App() {
     const diff = currentY - lastScrollY.current;
 
     if (diff > 5 && currentY > 40) {
-      // Aşağı kaydırılıyor -> Alt menüyü gizle
+      // Aşağı kaydırılıyor -> Alt menüyü gizle (65 px yükseklik + sistem alt boşluğu için 35 px)
       Animated.timing(scrollAnim, {
-        toValue: 90,
+        toValue: 100,
         duration: 200,
         useNativeDriver: true,
       }).start();
@@ -1477,7 +1477,7 @@ const styles = StyleSheet.create({
 
   tabBar: { 
     position: 'absolute',
-    bottom: 0,
+    bottom: Platform.OS === 'android' ? 25 : 0, // Android sistem çubuğu ile çakışmayı önlemek için eklendi
     left: 0,
     right: 0,
     height: 65, 
