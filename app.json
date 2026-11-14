@@ -3,8 +3,30 @@
     "name": "Patron",
     "slug": "patron",
     "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.toco.patron"
+    },
     "android": {
-      "package": "com.toco.patron"
-    }
+      "package": "com.toco.patron",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "02412e77-5797-46e2-b019-78e27dcfb89a"
+      }
+    },
+    "owner": "toco-ui"
   }
 }
