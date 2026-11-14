@@ -15,15 +15,16 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 18
+          cache: 'npm'
 
-      - name: Setup Expo
-        uses: expo/expo-github-action@v8
+      - name: Setup EAS
+        uses: expo/expo-github-action@v10
         with:
-          expo-version: latest
+          eas-version: latest
           token: ${{ secrets.EXPO_TOKEN }}
 
       - name: Install dependencies
         run: npm install
 
       - name: Build on EAS
-        run: eas build --platform android --profile preview --non-interactive --no-wait
+        run: npx eas build --platform android --profile preview --non-interactive
