@@ -1,3 +1,4 @@
+cat << 'EOF' > app.json
 {
   "expo": {
     "name": "Patron",
@@ -34,3 +35,4 @@
     "owner": "toco-ui"
   }
 }
+EOF
